@@ -36,10 +36,9 @@ MiniLoan/
 │       ├── Repositories/      # Interfaces & in-memory repositories
 │       ├── Services/          # LoanService and business logic
 │       └── Program.cs         # ASP.NET Core entry point
-│
+│       ├── Dockerfile         # Container build file 
 └── tests/
-    └── MiniLoan.Tests/        # Unit tests using xUnit & Moq
-├── Dockerfile                 # Container build file
+|    └── MiniLoan.Tests/        # Unit tests using xUnit & Moq
 └── README.md
 ---------------
 
@@ -116,10 +115,10 @@ Docker
 
 The project includes a Dockerfile. To build and run:
   # from project root
-  docker build -t miniloan-api -f Dockerfile .
-  docker run -d -p 5001:80 miniloan-api
+  docker build -t miniloan-api -f src/MiniLoan.Api/Dockerfile .  
+  docker run -d -p 8080:8080 --name miniloan-container miniloan-api
 
-Now the API is accessible at http://localhost:5001.
+Now the API is accessible at http://localhost:8080/swagger
 
 ---------------
 
@@ -127,3 +126,7 @@ Notes
 
 This project is for demo/learning purposes and not production-ready.
 Authentication/authorization, persistence (DB), and advanced validation are left out for simplicity.
+
+---------------
+
+Created by Lisa Luo 8/19/2025

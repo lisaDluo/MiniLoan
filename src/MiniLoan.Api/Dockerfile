@@ -8,7 +8,9 @@ WORKDIR /src
 COPY ./MiniLoan.sln ./
 COPY ./src/MiniLoan.Api/MiniLoan.Api.csproj ./src/MiniLoan.Api/
 
-RUN dotnet restore MiniLoan.sln
+# Restore just the API project (avoids needing test csproj in image)
+RUN dotnet restore ./src/MiniLoan.Api/MiniLoan.Api.csproj
+
 
 # Now copy the rest of the source
 COPY . .
