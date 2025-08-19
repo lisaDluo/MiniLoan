@@ -35,7 +35,7 @@ MiniLoan/
 │       ├── Models/            # Entities & enums (Loan, User, PaymentFrequency)
 │       ├── Repositories/      # Interfaces & in-memory repositories
 │       ├── Services/          # LoanService and business logic
-│       └── Program.cs         # ASP.NET Core entry point
+│       |── Program.cs         # ASP.NET Core entry point
 │       ├── Dockerfile         # Container build file 
 └── tests/
 |    └── MiniLoan.Tests/        # Unit tests using xUnit & Moq
@@ -45,7 +45,7 @@ MiniLoan/
 Getting Started (Visual Studio Code)
 1. Clone the repository
 
-  git clone <your-repo-url>
+  git clone <repo-url>
   cd MiniLoan.Api
 
 2. Restore dependencies
@@ -63,8 +63,6 @@ Getting Started (Visual Studio Code)
 By default, the API will be available at:
 
 http://localhost:5000
-
-https://localhost:7001
 
 ---------------
 
