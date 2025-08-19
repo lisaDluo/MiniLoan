@@ -1,0 +1,19 @@
+
+# Build results
+bin/
+obj/
+# VS user-specific files
+*.user
+*.suo
+.vs/
+# Logs
+*.log
+# Node modules (if you add more JS later)
+node_modules/
+# Rider/JetBrains
+.idea/
+# Coverage
+TestResults/
+coverage/
+# macOS
+.DS_Store
